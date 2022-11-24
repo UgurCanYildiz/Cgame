@@ -76,12 +76,12 @@ void herosecimmenu()
 
 int MarketAlani()
 {
-    int secim ; 
+    int secim,secim2 ; 
     printf("\n\n############################\n\n");
     printf("\n\n          Market Alanı      \n\n");
     printf("\n\n############################\n\n");
     printf("Altınınız : %d\n\n" , altin);
-    printf("Sacunma itemi seçmek için ==> 1 \n\n");
+    printf("Savunma itemi seçmek için ==> 1 \n\n");
     printf("Saldırı itemi seçmek için ==> 2\n\n");
     printf("Menüye dönmek için ==> 0 \n\n"); 
     while (1)
@@ -95,13 +95,129 @@ int MarketAlani()
         else if (secim == 1)
         {
             //SAvunma itemleri ...
-            printf("Savunma");
+            printf("1-->Tahta Kalkan => +10 can ==> 20 Altın \n");
+            printf("2-->Demir Kalkan => +20 can ==> 50 Altın\n");
+            printf("3-->Altın Kalkan => +30 can ==> 70 Altın\n");
+            printf("Seçmek istediğiniz itemin baş numarasını yazınız \n");
+            while (1)
+            {
+                scanf("%d",&secim2);
+                switch (secim2)
+                {
+                case  1:
+                        if (altin>=20)
+                        {
+                            printf("Tahta kalkan alınmıştır");
+                            printf("Eve gidip yeni canınızı güncelleyebilirsiniz !!\n");
+                            makscan = makscan +10;
+                            altin = altin -20;
+                            printf("Canınız => %d", can);
+                            printf("Altınınız => %d" , altin);
+                            break;
+                        }
+                        else{
+                            printf("Yeterli altınınız bulunmamaktadır.");
+                        }
+                    break;
+                case 2:
+                  if (altin>=50)
+                        {
+                            printf("Demir kalkan alınmıştır");
+                            printf("Eve gidip yeni canınızı güncelleyebilirsiniz !!\n");
+                            makscan = makscan + 20;
+                            altin = altin - 50;
+                            printf("Canınız => %d", can);
+                            printf("Altınınız => %d" , altin);
+                        }
+                        else{
+                            printf("Yeterli altınınız bulunmamaktadır.");
+                        }
+                    break;
+                
+                case 3:
+                    if (altin>=70)
+                        {
+                            printf("Altın kalkan alınmıştır\n");
+                            printf("Eve gidip yeni canınızı güncelleyebilirsiniz !!\n");
+                            makscan = makscan + 30;
+                            altin = altin - 70;
+                            printf("Canınız => %d", can);
+                            printf("Altınınız => %d" , altin);
+                        }
+                        else{
+                            printf("Yeterli altınınız bulunmamaktadır.");
+                        }
+                
+                    break;
+                default:
+                    printf("Yanlış tuşlama tekrar deneyiniz . ");
+                    break;
+                }
+                break;
+            }
+            
             break;
         }
         else if (secim == 2)
         {
             //Saldırı itemleri 
-            printf("SAldırı");
+            printf("1-->Tahta Bıçak => + 5 hasar ==> 20 Altın \n");
+            printf("2-->Demir Bıçak => + 10 hasar ==> 50 Altın\n");
+            printf("3-->Altın Bıçak => + 15 hasar ==> 70 Altın\n");
+            printf("Seçmek istediğiniz itemin baş numarasını yazınız \n");
+            while (1)
+            {
+                scanf("%d",&secim2);
+                switch (secim2)
+                {
+                case  1:
+                        if (altin>=20)
+                        {
+                            printf("Tahta Bıçak alınmıştır");
+                            hasar = hasar +5;
+                            altin = altin -20;
+                            printf("Hasarınız => %d", hasar);
+                            printf("Altınınız => %d" , altin);
+                            break;
+                        }
+                        else{
+                            printf("Yeterli altınınız bulunmamaktadır.");
+                        }
+                    break;
+                case 2:
+                  if (altin>=50)
+                        {
+                            printf("Demir Bıçak alınmıştır");
+                            hasar = hasar + 10;
+                            altin = altin - 50;
+                            printf("Hasarınız => %d", hasar);
+                            printf("Altınınız => %d" , altin);
+                        }
+                        else{
+                            printf("Yeterli altınınız bulunmamaktadır.");
+                        }
+                    break;
+                
+                case 3:
+                    if (altin>=70)
+                        {
+                            printf("Altın Bıçak alınmıştır\n");
+                            hasar = hasar + 30;
+                            altin = altin - 70;
+                            printf("Hasarınız => %d", hasar);
+                            printf("Altınınız => %d" , altin);
+                        }
+                        else{
+                            printf("Yeterli altınınız bulunmamaktadır.");
+                        }
+                
+                    break;
+                default:
+                    printf("Yanlış tuşlama tekrar deneyiniz . ");
+                    break;
+                }
+                break;
+            }
             break;
         }
         else
@@ -109,6 +225,7 @@ int MarketAlani()
             printf("Yanlış tuşlama yaptınız !!!");
         }
     }
+    return makscan , altin;
 }
 
 int home(makscan)
