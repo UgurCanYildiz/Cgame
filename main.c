@@ -252,9 +252,9 @@ int home(makscan)
     printf("\n\n          Ev Alani          \n\n");
     printf("\n\n############################\n\n");
     
-    printf("Canınız : %d" , can);
+    printf("Canınız : %d\n" , can);
     printf("Caniniz doluyor....\n\n"); 
-    printf("Caniniz dolmustur , Caniniz ==> %d \n\n" , makscan);
+    printf("Caniniz dolmustur ,\n Caniniz ==> %d \n\n" , makscan);
     can = makscan;
     altin = altin -3 ; 
     printf("Altınınız => %d \n" , altin);
@@ -300,7 +300,7 @@ int secim ,canavarcan,canavarhasar,dusmanaltin;
     int random = 1+rand()%a;
     int dusmancan = random * canavarcan;
     int dusmanhasar = random *  canavarhasar; 
-    printf("Karşınıza %d , canavar çıktı .\n" , random);
+    printf("\nKarşınıza %d , canavar çıktı .\n" , random);
     printf("Düşmanlar canlarını ve hasarlarını birleştirdi !\n");
     printf("Düşman canları => %d \nDüşman hasarları => %d\n\n" , dusmancan , dusmanhasar);    
     printf("Savaşmak için 1 'e ,\nÇıkmak için 0'a basınız !! \n\n");
@@ -355,9 +355,9 @@ int secim ,canavarcan,canavarhasar,dusmanaltin;
         }
     }
     printf("Tebrikler Canavarları alt ettin \n");
-    printf("Canın => %d kaldı . Evine dön !! \n" , can);
+    printf("Canın => %d kaldı . \nEvine dön !! \n" , can);
     printf("Karşılığında %d altın kazandın. \n" , canavartoplamaltin);
-    printf("Menüye yönlendiriliyosun !!");
+    printf("Menüye yönlendiriliyosun !!\n");
 
 
     toplamaltin += altin ;
